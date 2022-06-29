@@ -42,3 +42,7 @@ def lista_familiares(request):
     render= template.render({"lista_familiares":lista_familiares})
     
     return HttpResponse(render)
+
+def index(request):
+    
+    return render(request,"index.html")
