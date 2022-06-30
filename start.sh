@@ -4,4 +4,4 @@ if [ $VIRTUAL_ENVIROMENT]
 then
     deactivate
 fi
-. venv_django/Scripts/activate     
+. venv_desafio/Scripts/activate     
