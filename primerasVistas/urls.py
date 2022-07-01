@@ -8,7 +8,7 @@ urlpatterns = [
 
     path('', inicio),
     path('saludo/<nombre>/<apellido>', saludo),
-    path('carga_familiares/<nombre_persona>/<edad_persona>', carga_familares),
+    path('carga_familiares/<nombre_persona>/<edad_persona>/<fecha_persona>', carga_familares),
     path('lista_familiares/',lista_familiares),
     path('index/',index),
 
