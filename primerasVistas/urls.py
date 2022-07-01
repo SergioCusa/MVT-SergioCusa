@@ -6,10 +6,10 @@ from django.urls import path, include
 
 urlpatterns = [
 
-    path('', inicio),
+    path('', inicio, name="index"),
     path('saludo/<nombre>/<apellido>', saludo),
-    path('carga_familiares/<nombre_persona>/<edad_persona>/<fecha_persona>', carga_familares),
-    path('lista_familiares/',lista_familiares),
+    path('carga_familiares/<nombre_persona>/<edad_persona>/<fecha_persona>', carga_familares,name="carga_familiares"),
+    path('lista_familiares/',lista_familiares, name="lista_familiares"),
     path('index/',index),
 
 ]
