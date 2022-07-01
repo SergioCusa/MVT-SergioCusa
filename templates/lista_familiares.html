@@ -1,23 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de familiares</title>
-</head>
-<body>
-    <p>
-        Este es el listado:
-        <ul>
-            {% for persona in lista_familiares %}
+{% extends 'base.html' %}
 
-            <li>Nombre: {{persona.nombre}} Edad: {{persona.edad}} Fecha: {{persona.fecha}}  </li>
+{% block title %}
+<title>Lista de familiares</title>
+{% endblock title %} 
 
+{% block texto_h3 %}
+<h3>Este es el listado:</ht>
+{% endblock texto_h3 %}
 
-            {% endfor %}
-        </ul>
-    </p>
-    <p>Para cargar  una persona a la lista escriba en la url: "/carga_familiares/nombre/edad"</p>
-</body>
-</html>
+{% block instrucciones %}
+<p>
+    <ul>
+        {% for persona in lista_familiares %}
+        
+        <li>Nombre: {{persona.nombre}} Edad: {{persona.edad}} Fecha: {{persona.fecha}}  </li>
+        
+        
+        {% endfor %}
+    </ul>
+</p>
+<p>Para cargar  una persona a la lista escriba en la url: "/carga_familiares/nombre/edad"</p>
+
+{% endblock instrucciones %}
