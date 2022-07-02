@@ -21,15 +21,10 @@ def saludo (request,nombre,apellido):
     return HttpResponse(f"Hola {nombre} {apellido}") 
 
 def carga_familares(request,nombre_persona,edad_persona,fecha_persona):
-    
-    # template= loader.get_template("carga_familiares.html")
-    
+     
     persona=Persona(nombre=nombre_persona,edad=edad_persona,fecha=fecha_persona)
     persona.save()
     
-    # render=template.render({"persona":persona,"edad":edad_persona})
-    
-    # return HttpResponse(render)
     return render (request,"carga_familiares.html",{"persona":persona,"edad":edad_persona,"fecha":fecha_persona})
   
 

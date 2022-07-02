@@ -8,7 +8,27 @@
 <h3>Info de familiares:</h3> 
 {% endblock texto_h3 %}
 
+
+
 {% block instrucciones %}
+<ul>
+    <form action=""method="get">
+        <p>
+            Nombre:
+            <input type="text" name="nombre">
+        </p>
+        <p>
+            Edad:
+            <input type="number" name="edad">
+        </p>
+        <p>
+            Fecha:
+            <input type="date" name="fecha">
+        </p>
+        <button>Crear</button>
+    </form>
+</ul>
+
 <ul>
     <li>Nombre: {{persona.nombre}} </li>
     <li>Edad: {{persona.edad}} </li>
