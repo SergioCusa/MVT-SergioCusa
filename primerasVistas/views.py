@@ -22,11 +22,17 @@ def saludo (request,nombre,apellido):
 
 def carga_familares(request):
     
+    nombre= request.GET.get("nombre")
+    edad=request.GET.get("edad")
+    fecha=request.GET.get("fecha")
+    
+    persona= Persona(nombre=nombre,edad=edad,fecha=fecha)
+    persona.save()
     
     # persona=Persona(nombre=nombre_persona,edad=edad_persona,fecha=fecha_persona)
     # persona.save()
     
-    return render (request,"carga_familiares.html",{})
+    return render (request,"carga_familiares.html",{"persona":persona})
   
 
 def lista_familiares(request):
