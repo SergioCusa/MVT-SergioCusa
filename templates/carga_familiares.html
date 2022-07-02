@@ -1,20 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carga de familiares</title>
-</head>
-<body>
-    <p>Info de familiares:
-        <ul>
-            <li>Nombre: {{persona.nombre}} </li>
-            <li>Edad: {{persona.edad}} </li>
-            <li>Fecha: {{persona.fecha}} </li>
-            
-        </ul>
-    </p>
-    <p>Para ver la lista de familiares escriba en la url: "/lista_familiares"</p>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Carga de familiares</title>
+{% endblock title %}
+
+{% block texto_h3 %}
+<h3>Info de familiares:</h3> 
+{% endblock texto_h3 %}
+
+{% block instrucciones %}
+<ul>
+    <li>Nombre: {{persona.nombre}} </li>
+    <li>Edad: {{persona.edad}} </li>
+    <li>Fecha: {{persona.fecha}} </li>
+    
+</ul>
+</p>
+<p>Para ver la lista de familiares escriba en la url: "/lista_familiares"</p>
+{% endblock instrucciones %}
