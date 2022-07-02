@@ -20,12 +20,13 @@ def inicio (request):
 def saludo (request,nombre,apellido):
     return HttpResponse(f"Hola {nombre} {apellido}") 
 
-def carga_familares(request,nombre_persona,edad_persona,fecha_persona):
-     
-    persona=Persona(nombre=nombre_persona,edad=edad_persona,fecha=fecha_persona)
-    persona.save()
+def carga_familares(request):
     
-    return render (request,"carga_familiares.html",{"persona":persona,"edad":edad_persona,"fecha":fecha_persona})
+    
+    # persona=Persona(nombre=nombre_persona,edad=edad_persona,fecha=fecha_persona)
+    # persona.save()
+    
+    return render (request,"carga_familiares.html",{})
   
 
 def lista_familiares(request):
