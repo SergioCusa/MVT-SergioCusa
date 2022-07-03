@@ -12,19 +12,8 @@
 
 {% block instrucciones %}
 <ul>
-    <form action="" method="get">
-        <p>
-            Nombre:
-            <input type="text" name="nombre">
-        </p>
-        <p>
-            Edad:
-            <input type="number" name="edad">
-        </p>
-        <p>
-            Fecha:
-            <input type="date" name="fecha">
-        </p>
+    <form action="" method="post">
+        {{form}}
         <button>Crear</button>
     </form>
 </ul>

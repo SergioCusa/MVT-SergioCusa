@@ -10,7 +10,7 @@ urlpatterns = [
     path('saludo/<nombre>/<apellido>', saludo),
     path('carga_familiares/', carga_familares,name="carga_familiares"),
     path('lista_familiares/',lista_familiares, name="lista_familiares"),
-    path('index/',index),
+    
 
 ]
  
